@@ -1,0 +1,86 @@
+.loginc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  form {
+    width: 100%;
+    max-width: 300px;
+    background-color: #9b9a9a;
+    padding: 2.5rem;
+    border-radius: 12px;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); // Softer shadow for professional look
+
+    
+    div {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #34495e; // Professional text color
+    }
+
+// Shared styles for input and button
+.input-button {
+  width: 100%; // Full width
+  max-width: 300px; // Same max-width
+  padding: 0.8rem; // Consistent padding
+  border-radius: 8px; // Same border-radius
+  font-size: 1rem; // Consistent font size
+  font-family: 'Poppins', sans-serif; // Shared font
+  box-sizing: border-box; // Ensure consistent box sizing
+}
+
+// Input styles
+input {
+  @extend .input-button; // Reuse shared styles
+  border: 1px solid #dfe6e9;
+  transition: box-shadow 0.3s, border-color 0.3s;
+
+  &:focus {
+    border-color: #3498db; // Highlight border
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); // Glowing focus effect
+    outline: none;
+  }
+}
+
+// Button styles
+button {
+  @extend .input-button; // Reuse shared styles
+  background: linear-gradient(135deg, #3498db, #2980b9); // Gradient button
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: linear-gradient(135deg, #2c80ba, #1e5a8a); // Darker gradient on hover
+    transform: scale(1.02); // Slight zoom effect
+  }
+
+  &:active {
+    transform: scale(0.98); // Press effect
+  }
+}
+  }
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+  }
+
+  form {
+    width: 100%;
+  }
+}
