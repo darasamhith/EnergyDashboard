@@ -43,7 +43,7 @@ const summaryData = [
 const db = mysql.createConnection({
   host: 'cleanenergynbad.cteu8yg8i941.us-east-1.rds.amazonaws.com',
   user: 'admin', // Replace with your MySQL username
-  password: 'xyz', // Replace with your MySQL password
+  password: 'ufkpcgbMbEgZXgCUhxpr', // Replace with your MySQL password
   database: 'nbad',
 });
 

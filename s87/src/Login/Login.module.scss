@@ -1,86 +1,89 @@
-.loginc{
+.loginc {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f4f7, #e8ebf2); // Subtle gradient background
+  font-family: 'Poppins', sans-serif; // Professional, modern font
 }
 
-  form {
-    width: 100%;
-    max-width: 300px;
-    background-color: #9b9a9a;
-    padding: 2.5rem;
-    border-radius: 12px;
-    align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); // Softer shadow for professional look
-
-    
-    div {
-      margin-bottom: 1.5rem;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #34495e; // Professional text color
-    }
-
-// Shared styles for input and button
-.input-button {
-  width: 100%; // Full width
-  max-width: 300px; // Same max-width
-  padding: 0.8rem; // Consistent padding
-  border-radius: 8px; // Same border-radius
-  font-size: 1rem; // Consistent font size
-  font-family: 'Poppins', sans-serif; // Shared font
-  box-sizing: border-box; // Ensure consistent box sizing
-}
-
-// Input styles
-input {
-  @extend .input-button; // Reuse shared styles
-  border: 1px solid #dfe6e9;
-  transition: box-shadow 0.3s, border-color 0.3s;
-
-  &:focus {
-    border-color: #3498db; // Highlight border
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); // Glowing focus effect
-    outline: none;
-  }
-}
-
-// Button styles
-button {
-  @extend .input-button; // Reuse shared styles
-  background: linear-gradient(135deg, #3498db, #2980b9); // Gradient button
-  color: #ffffff;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+form {
+  width: 100%;
+  max-width: 350px; // Slightly larger form for better spacing
+  background-color: #ffffff; // Clean white background for form
+  padding: 2.5rem;
+  border-radius: 16px; // Softer corners for modern look
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); // Elevation for professional feel
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background: linear-gradient(135deg, #2c80ba, #1e5a8a); // Darker gradient on hover
-    transform: scale(1.02); // Slight zoom effect
+    transform: translateY(-5px); // Slight hover lift
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); // Enhanced shadow on hover
   }
 
-  &:active {
-    transform: scale(0.98); // Press effect
+  div {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600; // Slightly bolder text for labels
+    color: #2c3e50; // Darker, professional text color
+  }
+
+  .input-button {
+    width: 100%; // Full width
+    padding: 0.9rem; // Slightly larger padding for comfort
+    border-radius: 10px; // Softer edges for consistency
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  input {
+    @extend .input-button;
+    border: 1px solid #d6dbe0; // Neutral border
+    background: #f9fafb; // Light background for inputs
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:focus {
+      border-color: #5dade2; // Accent blue for focus
+      box-shadow: 0 0 6px rgba(93, 173, 226, 0.5); // Soft glowing effect
+      outline: none;
+    }
+  }
+
+  button {
+    @extend .input-button;
+    background: linear-gradient(135deg, #5dade2, #2874a6); // Modern gradient button
+    color: #ffffff;
+    font-weight: 700; // Bold for prominence
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(135deg, #2874a6, #154360); // Darker hover gradient
+      transform: translateY(-2px); // Slight hover lift
+    }
+
+    &:active {
+      transform: translateY(2px); // Press effect
+    }
   }
 }
-  }
 
 @media (max-width: 768px) {
-  .login-container {
-    padding: 1.5rem;
-  }
-
-  .login-form {
+  .loginc {
     padding: 1.5rem;
   }
 
   form {
-    width: 100%;
+    padding: 2rem;
+    max-width: 90%; // Ensure form fits smaller screens
   }
 }
