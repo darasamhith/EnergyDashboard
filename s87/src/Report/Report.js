@@ -10,7 +10,7 @@ function Reports() {
     const fetchData = async () => {
       // Replace this with your actual API endpoint
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:3001/api/report-data',{
+      const response = await fetch('http://104.131.13.39:3001/api/report-data',{
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the request header

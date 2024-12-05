@@ -14,7 +14,7 @@ function App() {
   const checkTokenValidity = async () => {
     const token = localStorage.getItem('token');
     if (token) {
-      const response = await fetch('http://localhost:3001/verify-token', {
+      const response = await fetch('http://104.131.13.39:3001/verify-token', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -35,7 +35,7 @@ function App() {
 
   // Callback function for login to set isLoggedIn to true
   const handleLogin = async (username, password) => {
-    const response = await fetch('http://localhost:3001/login', {
+    const response = await fetch('http://104.131.13.39:3001/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

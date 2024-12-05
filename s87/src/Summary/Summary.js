@@ -11,7 +11,7 @@ function Summary() {
     const fetchData = async () => {
         const token = localStorage.getItem('token');
       // Replace this with your actual API endpoint
-      const response = await fetch('http://localhost:3001/api/summary-data',{
+      const response = await fetch('http://104.131.13.39:3001/api/summary-data',{
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`, // Include the token in the request header
