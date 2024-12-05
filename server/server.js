@@ -33,17 +33,11 @@ const summaryData = [
     {"year": 2023, "capacity": 800}
   ];
 
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root', // Replace with your MySQL username
-//   password: 'SDMac@SD', // Replace with your MySQL password
-//   database: 'clean_energy',
-// });
 
 const db = mysql.createConnection({
   host: 'cleanenergynbad.cteu8yg8i941.us-east-1.rds.amazonaws.com',
   user: 'admin', // Replace with your MySQL username
-  password: 'ufkpcgbMbEgZXgCUhxpr', // Replace with your MySQL password
+  password: '**', // Replace with your MySQL password
   database: 'nbad',
 });
 
