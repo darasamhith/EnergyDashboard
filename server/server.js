@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
@@ -34,12 +35,12 @@ const summaryData = [
   ];
 
 
-const db = mysql.createConnection({
-  host: 'cleanenergynbad.cteu8yg8i941.us-east-1.rds.amazonaws.com',
-  user: 'admin', // Replace with your MySQL username
-  password: '**', // Replace with your MySQL password
-  database: 'nbad',
-});
+  const db = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  });
 
 // Connect to the database
 db.connect((err) => {
